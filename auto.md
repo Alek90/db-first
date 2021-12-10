@@ -3,31 +3,32 @@
 
 (Table) auto:
 
-id
+id | BIGINT - AUTO INCREMENT, PRIMARY KEY, UNIQUE, NOTNULL
 
-marca
-modello
-model-year
-allestimento
+marca | VARCHAR(20) - NOTNULL
+modello | VARCHAR(25) - NOTNULL
+model_year | YEAR - NULL
+allestimento | VARCHAR(25) - NULL
+prezzo(€) | DECIMAL(7,2) - NOTNULL
 
-anno di immatricolazione
-km percorsi
-condizione
+anno_di_immatricolazione | YEAR - NOTNULL
+km_percorsi(*1000) | TINYINT - NOTNULL
+condizione | VARCHAR(15) - NULL
 
-alimentazione
-cilindrata
-potenza
-consumi
+alimentazione | VARCHAR(20) - NOTNULL
+cilindrata(cc) | VARCHAR(4) - NULL
+potenza(cv) | TINYINT - NULL
+consumi(l/100km) | FLOAT(2,1) - NULL
 
-colore
-num porte
-num posti
-num airbag
+colore | VARCHAR(20) - NULL
+num_porte | CHAR(1) - NULL
+num_posti | CHAR(1) - NULL
+num_airbag | CHAR(1) - NULL
 
-controlli
-garanzia
-documenti
-accessori
-note
+controlli | TEXT - NULL
+garanzia | BIT - DEFAULT(1)
+documenti | TEXT - NULL
+accessori | TEXT - NULL
+note | TEXT - NULL
 
 
